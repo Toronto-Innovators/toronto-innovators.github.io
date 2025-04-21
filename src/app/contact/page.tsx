@@ -31,12 +31,11 @@ export default function Contact() {
   return (
     <Box
       sx={{
-        backgroundColor: "#FFF",
         minHeight: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        py: 6,
+       mt: "140px"
       }}
     >
       <Container maxWidth="md">
@@ -46,7 +45,6 @@ export default function Contact() {
             px: { xs: 3, sm: 8 },
             py: 10,
             borderRadius: 3,
-            backgroundColor: "#FFF",
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.05)",
             display: "flex",
             flexDirection: "row",

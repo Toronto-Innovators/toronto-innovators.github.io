@@ -39,14 +39,11 @@ export default function Header() {
       <AppBar
         component="nav"
         sx={{
-          position: "absolute",
           top: 1,
           width: "100%",
-          zIndex: 1100,
           boxShadow: "none",
           height: "90px",
           backgroundColor: "transparent",
-          backdropFilter: "blur(15px)"
         }}
       >
         <Toolbar
@@ -121,8 +118,8 @@ export default function Header() {
           },
         }}
       >
-        <Box sx={{ textAlign: "left", mt: 9 }}>
-  
+        <Box sx={{ textAlign: "left"}}>
+
           <List>
             {navItems.map((item) => (
               <ListItem key={item} disablePadding>

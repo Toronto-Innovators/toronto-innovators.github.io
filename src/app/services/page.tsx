@@ -41,7 +41,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <Box sx={{ mt: 10, py: 10, px: 3, minHeight: "100vh" }}>
+    <Box sx={{ mt: "140px",px: 3, minHeight: "100vh" }}>
       <Typography
         variant="h3"
         fontWeight="bold"

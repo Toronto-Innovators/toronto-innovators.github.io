@@ -10,15 +10,13 @@ export default function Hero() {
   };
 
   return (
-    <Box id="Home" sx={{ position: "relative", height: "100vh", overflow: "hidden" }}>
+    <Box id="Home" sx={{ position: "relative", overflow: "hidden", paddingTop: "100px" }}>
       <Box
         sx={{
           position: "absolute",
-          top: 0,
-          left: 0,
           width: "100%",
           height: "100%",
-          zIndex: -1,
+         
         }}
       >
         <video
@@ -56,7 +54,6 @@ export default function Hero() {
             flexDirection: "column",
             pl: { xs: 2, md: "4rem" },
             gap: 2,
-            backgroundColor: "rgba(0, 0, 0, 0.6)",
             color: "#fff",
             p: 4,
             borderRadius: 2,

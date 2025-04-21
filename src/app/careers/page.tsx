@@ -26,7 +26,7 @@ export default function Careers() {
         justifyContent: "center",
         px: 3,
         py: 10,
-        mt:10,
+        paddingTop: "140px",
         textAlign: "center",
         bgcolor: "#ffffff",
         color: "#111",
