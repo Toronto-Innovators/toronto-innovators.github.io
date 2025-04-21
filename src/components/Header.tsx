@@ -17,7 +17,7 @@ import {
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const navItems = ["Home", "Services","Contact", "Careers", "Projects"];
+const navItems = ["Home", "Services","Contact", "Careers"];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -39,7 +39,10 @@ export default function Header() {
       <AppBar
         component="nav"
         sx={{
+          position:"fixed",
           top: 1,
+          bottom: 0,
+          left: 0,
           width: "100%",
           boxShadow: "none",
           height: "90px",
@@ -100,7 +103,6 @@ export default function Header() {
 </IconButton>
         </Toolbar>
       </AppBar>
-
       <Drawer
         variant="temporary"
         open={mobileOpen}

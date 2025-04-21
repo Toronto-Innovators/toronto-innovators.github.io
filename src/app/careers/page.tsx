@@ -28,7 +28,6 @@ export default function Careers() {
         py: 10,
         paddingTop: "140px",
         textAlign: "center",
-        bgcolor: "#ffffff",
         color: "#111",
         scrollSnapAlign: "start"
       }}

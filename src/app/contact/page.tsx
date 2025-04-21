@@ -31,7 +31,6 @@ export default function Contact() {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -43,7 +42,6 @@ export default function Contact() {
           elevation={0}
           sx={{
             px: { xs: 3, sm: 8 },
-            py: 10,
             borderRadius: 3,
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.05)",
             display: "flex",

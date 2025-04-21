@@ -48,7 +48,6 @@ export default function ServicesPage() {
         textAlign="center"
         gutterBottom
         sx={{
-          color: "#fff",
           letterSpacing: 1.5,
           textShadow: "0 2px 4px rgba(0,0,0,0.6)",
         }}
