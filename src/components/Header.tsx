@@ -17,7 +17,7 @@ import {
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const navItems = ["Home", "Services","Contact", "Careers"];
+const navItems = ["Home", "Services", "Contact", "Careers"];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -34,18 +34,16 @@ export default function Header() {
   };
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
+    <Box sx={{ display: "flex", flexDirection: "column", zIndex:1000}}>
       <CssBaseline />
       <AppBar
         component="nav"
+        position="relative"
         sx={{
-          position:"fixed",
-          top: 1,
-          bottom: 0,
-          left: 0,
+          podition:"relative",
           width: "100%",
           boxShadow: "none",
-          height: "90px",
+          height: "40px",
           backgroundColor: "transparent",
         }}
       >
@@ -62,13 +60,12 @@ export default function Header() {
             alt="Ada Tech"
             width={100}
             height={100}
-      
           />
           <Typography
             variant="h5"
             component="div"
             sx={{
-              pl:1,
+              pl: 1,
               fontWeight: 900,
               letterSpacing: "0.5px",
               color: "#111",
@@ -81,26 +78,26 @@ export default function Header() {
             ADA Tech - Toronto Innovators
           </Typography>
           <IconButton
-  color="inherit"
-  aria-label="open drawer"
-  edge="end"
-  onClick={handleDrawerToggle}
-  sx={{
-    display: "block",
-    ml: "auto",
-    backdropFilter: "blur(6px)",
-    backgroundColor: "rgba(255, 255, 255, 0.2)",
-    border: "1px solid rgba(255, 255, 255, 0.3)",
-    borderRadius: "12px",
-    transition: "all 0.3s ease-in-out",
-    "&:hover": {
-      backgroundColor: "rgba(255, 255, 255, 0.35)",
-      transform: "scale(1.05)",
-    },
-  }}
->
-  <MenuIcon sx={{ color: "#111", fontSize: "1.8rem" }} />
-</IconButton>
+            color="inherit"
+            aria-label="open drawer"
+            edge="end"
+            onClick={handleDrawerToggle}
+            sx={{
+              display: "block",
+              ml: "auto",
+              backdropFilter: "blur(6px)",
+              backgroundColor: "rgba(255, 255, 255, 0.2)",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease-in-out",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.35)",
+                transform: "scale(1.05)",
+              },
+            }}
+          >
+            <MenuIcon sx={{ color: "#111", fontSize: "1.8rem" }} />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -108,7 +105,7 @@ export default function Header() {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         sx={{
-          display: "block", 
+          display: "block",
           "& .MuiDrawer-paper": {
             width: "100%",
             mt: "95px",
@@ -120,14 +117,13 @@ export default function Header() {
           },
         }}
       >
-        <Box sx={{ textAlign: "left"}}>
-
+        <Box sx={{ textAlign: "left" }}>
           <List>
             {navItems.map((item) => (
               <ListItem key={item} disablePadding>
                 <ListItemButton
-                onClick={() => {
-                    const path = item.toLowerCase().replace(/\s+/g, '-');
+                  onClick={() => {
+                    const path = item.toLowerCase().replace(/\s+/g, "-");
                     window.location.href = path === "home" ? "/" : `/${path}`;
                     setMobileOpen(false);
                   }}

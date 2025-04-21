@@ -10,8 +10,8 @@ const theme = createTheme({
     info: { main: "#9C27B0", contrastText: "#FFFFFF" }, 
 
     background: {
-      default: "#F1F3F5",
-      paper: "#FFFFFF", 
+      default: "#F3F4F6",
+      paper: "#F3F4F6", 
     },
 
     text: {
@@ -56,7 +56,7 @@ const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundColor: "#FFFFFF",
+          backgroundColor: "#F3F4F6",
           color: "#1C1C1E",
           borderRadius: "12px",
           padding: "20px",

@@ -10,7 +10,7 @@ export default function Hero() {
   };
 
   return (
-    <Box id="Home" sx={{ position: "relative", overflow: "hidden", paddingTop: "100px" }}>
+    <Box id="Home" sx={{ position: "relative", overflow: "hidden", mt:"60px"}}>
       <Box
         sx={{
           position: "absolute",

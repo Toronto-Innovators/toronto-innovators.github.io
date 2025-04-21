@@ -41,7 +41,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <Box sx={{ mt: "140px",px: 3, minHeight: "100vh" }}>
+    <Box sx={{ mt: "100px",px: 3, minHeight: "100vh" }}>
       <Typography
         variant="h3"
         fontWeight="bold"
@@ -49,7 +49,7 @@ export default function ServicesPage() {
         gutterBottom
         sx={{
           letterSpacing: 1.5,
-          textShadow: "0 2px 4px rgba(0,0,0,0.6)",
+          mb:4
         }}
       >
         Our Services

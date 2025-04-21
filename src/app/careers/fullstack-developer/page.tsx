@@ -12,8 +12,7 @@ export default function FullStackDeveloperPage() {
         px: 2,
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
-        mt:10
+        justifyContent: "center"
       }}
     >
       <Container maxWidth="md">
