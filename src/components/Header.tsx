@@ -63,8 +63,8 @@ export default function Header() {
           <Image
             src="/adatechlogo.png"
             alt="Ada Tech"
-            width={48}
-            height={48}
+            width={70}
+            height={70}
             style={{ borderRadius: "10px" }}
           />
           <Typography
@@ -82,15 +82,34 @@ export default function Header() {
             }}
             onClick={() => handleNavClick("Home")}
           >
-            ADA Tech - Toronto Innovators
+            ADA TECH
           </Typography>
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
+            {navItems.map((item) => (
+              <Typography
+                key={item}
+                sx={{
+                  cursor: "pointer",
+                  fontWeight: 500,
+                  color: "#111",
+                  "&:hover": { color: "#000" },
+                }}
+                onClick={() => {
+                  const path = item.toLowerCase().replace(/\s+/g, "-");
+                  window.location.href = path === "home" ? "/" : `/${path}`;
+                }}
+              >
+                {item}
+              </Typography>
+            ))}
+          </Box>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="end"
             onClick={handleDrawerToggle}
             sx={{
-              display: "block",
+              display: { xs: "block", md: "none" },
               ml: "auto",
               backdropFilter: "blur(6px)",
               backgroundColor: "rgba(255, 255, 255, 0.2)",
@@ -112,7 +131,7 @@ export default function Header() {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         sx={{
-          display: "block",
+          display: { xs: "block", md: "none" },
           "& .MuiDrawer-paper": {
             width: "100%",
             mt: "95px",

@@ -83,7 +83,7 @@ export default function Hero() {
               fontWeight: "600",
             }}
           >
-           Ada Tech turns ideas into intelligent digital solutions!
+           Empowering Your Business with Custom Digital Solutions
           </Typography>
           <Button
             variant="contained"

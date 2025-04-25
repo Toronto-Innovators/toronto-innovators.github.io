@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { Box, Typography } from "@mui/material";
-// import SurveyButton from "./SurveyButton";
+import { Box, Typography, Link, IconButton } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 
 export default function Footer() {
   return (
@@ -12,70 +13,73 @@ export default function Footer() {
         mt: 8,
         py: 4,
         px: 3,
-        background: "linear-gradient(145deg, #ECE9F7, #FFFFFF)",
-        borderTop: "1px solid #E1E3E6",
-        boxShadow: "inset 0 6px 10px rgba(0,0,0,0.04)",
-        color: "#1C1C1E",
+        background: "linear-gradient(180deg, #f9fafb, #e5e7eb)",
+        color: "text.primary",
+        borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+        boxShadow: "inset 0 6px 10px rgba(0,0,0,0.2)",
       }}
     >
-      <Typography variant="body2" sx={{ mb: 2, textAlign: "left" }}>
-        &copy; {new Date().getFullYear()} ADA Tech. All rights reserved.
-      </Typography>
-      <Typography variant="body2" sx={{ mb: 2, textAlign: "left" }}>
-        Looking to join our team? Check out our{" "}
-        <a
-          href="/careers"
-          style={{
-            color: "#1C1C1E",
-            textDecoration: "underline",
-            fontWeight: 500,
-            transition: "color 0.3s",
-            cursor: "pointer",
-          }}
-        >
-          career opportunities
-        </a>
-        .
-      </Typography>
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
-          mb: 2,
+          gap: 2,
+          mb: 3,
         }}
       >
-        <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
-          <a
+        <Typography variant="body2" sx={{ fontWeight: 500, color: "text.primary" }}>
+          &copy; {new Date().getFullYear()} ADA Tech. Designed & Developed by sahara.com
+        </Typography>
+
+        <Box sx={{ display: "flex", gap: 2 }}>
+          <IconButton
+            component="a"
             href="https://www.linkedin.com/company/adatech-solutions/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              color: "#1C1C1E",
-              textDecoration: "none",
-              fontWeight: 500,
+            sx={{
+              color: "text.primary",
               transition: "color 0.3s",
-              cursor: "pointer",
+              "&:hover": { color: "primary.main" },
             }}
           >
-            LinkedIn
-          </a>
-          <a
+            <LinkedInIcon />
+          </IconButton>
+          <IconButton
+            component="a"
             href="mailto:info@adatech.ca"
-            style={{
-              color: "#1C1C1E",
-              textDecoration: "none",
-              fontWeight: 500,
+            sx={{
+              color: "text.primary",
               transition: "color 0.3s",
-              cursor: "pointer",
+              "&:hover": { color: "primary.main" },
             }}
           >
-            Contact
-          </a>
+            <EmailIcon />
+          </IconButton>
         </Box>
-        {/* <SurveyButton /> */}
       </Box>
+
+      <Typography
+        variant="body2"
+        textAlign="center"
+        sx={{ fontSize: "0.9rem", mt: 3, color: "text.primary" }}
+      >
+        Interested in joining our mission?{" "}
+        <Link
+          href="/careers"
+          underline="hover"
+          sx={{
+            color: "primary.dark",
+            fontWeight: 600,
+            "&:hover": { color: "primary.dark" },
+          }}
+        >
+          Explore Careers
+        </Link>
+      </Typography>
     </Box>
   );
 }
