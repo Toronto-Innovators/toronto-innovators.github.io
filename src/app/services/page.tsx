@@ -1,47 +1,48 @@
 "use client";
 
 import { Box, Typography, Paper } from "@mui/material";
-import WebIcon from "@mui/icons-material/Web";
-import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import DescriptionIcon from "@mui/icons-material/Description";
+import LanguageIcon from "@mui/icons-material/Language";
+import BrushIcon from "@mui/icons-material/Brush";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 const services = [
   {
-    icon: <WebIcon fontSize="large" />,
-    title: "Web Design & Development",
-    description: "Responsive, high-performance websites tailored to your brand, built with the latest frameworks.",
+    icon: <LanguageIcon fontSize="large" />,
+    title: "Starter Website Package",
+    description: "Responsive 1–5 page website with contact form and basic SEO.",
+    price: "$799+",
   },
   {
-    icon: <BusinessCenterIcon fontSize="large" />,
-    title: "Mobile App Design",
-    description: "Beautiful, intuitive apps for iOS and Android — from wireframes to launch and beyond.",
+    icon: <BrushIcon fontSize="large" />,
+    title: "Business Branding Kit",
+    description: "Custom logo, brand colors, fonts, and social media templates.",
+    price: "$499",
   },
   {
-    icon: <BarChartIcon fontSize="large" />,
-    title: "UI/UX Strategy",
-    description: "User-first experiences powered by research, design thinking, and modern design systems.",
+    icon: <TrendingUpIcon fontSize="large" />,
+    title: "Google & SEO Essentials",
+    description: "Boost your online visibility with SEO and Google Business setup.",
+    price: "$399",
   },
   {
-    icon: <DescriptionIcon fontSize="large" />,
-    title: "Prototyping & MVP Launch",
-    description: "Turn your idea into a functional MVP fast — perfect for testing, validating, and pitching.",
+    icon: <InstagramIcon fontSize="large" />,
+    title: "Social Media Setup",
+    description: "Set up Instagram, WhatsApp Business, and LinkedIn professionally.",
+    price: "$299",
   },
   {
-    icon: <WebIcon fontSize="large" />,
-    title: "Custom CMS Solutions",
-    description: "Scalable content management systems tailored to your needs — no bloated themes or templates.",
-  },
-  {
-    icon: <BarChartIcon fontSize="large" />,
-    title: "Tech Consulting",
-    description: "We guide your team with the right stack, workflows, and architecture to future-proof your business.",
+    icon: <SupportAgentIcon fontSize="large" />,
+    title: "Monthly Maintenance Plan",
+    description: "Ongoing website edits, updates, and tech support every month.",
+    price: "$99/month",
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <Box sx={{ mt: "100px",px: 3, minHeight: "100vh" }}>
+    <Box sx={{ mt: "100px", px: 3, minHeight: "100vh" }}>
       <Typography
         variant="h3"
         fontWeight="bold"
@@ -49,7 +50,7 @@ export default function ServicesPage() {
         gutterBottom
         sx={{
           letterSpacing: 1.5,
-          mb:4
+          mb: 4,
         }}
       >
         Our Services
@@ -61,7 +62,6 @@ export default function ServicesPage() {
           flexWrap: "wrap",
           justifyContent: "center",
           gap: 3,
-         
         }}
       >
         {services.map((service, index) => (
@@ -69,18 +69,21 @@ export default function ServicesPage() {
             key={index}
             elevation={3}
             sx={{
-              p: 3,
+              p: 4,
               maxWidth: 300,
-              minHeight: 260,
+              minHeight: 320,
               flex: "1 1 250px",
-              background: "#ffffff",
-              borderRadius: 3,
-              border: "1px solid #e0e0e0",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.03)",
+              background: "linear-gradient(145deg, #ECE9F7, #FFFFFF)",
+              borderRadius: "20px",
+              border: "1px solid #E1E3E6",
+              boxShadow: "6px 6px 12px #dcdcdc, -6px -6px 12px #ffffff",
               transition: "all 0.3s ease",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
               "&:hover": {
-                transform: "translateY(-6px)",
-                boxShadow: "0 12px 24px rgba(0,0,0,0.1)",
+                transform: "translateY(-8px)",
+                boxShadow: "10px 10px 20px #d0d0d0, -10px -10px 20px #ffffff",
               },
             }}
           >
@@ -88,8 +91,11 @@ export default function ServicesPage() {
             <Typography variant="h6" fontWeight="bold" sx={{ mb: 1 }}>
               {service.title}
             </Typography>
-            <Typography variant="body2" color="text.primary">
+            <Typography variant="body2" color="text.primary" sx={{ mb: 1 }}>
               {service.description}
+            </Typography>
+            <Typography variant="subtitle2" fontWeight="bold" color="primary.main">
+              {service.price}
             </Typography>
           </Paper>
         ))}

@@ -38,28 +38,34 @@ export default function Header() {
       <CssBaseline />
       <AppBar
         component="nav"
-        position="relative"
+        position="sticky"
         sx={{
-          podition:"relative",
           width: "100%",
+          maxWidth:"100%",
+          flex: "1 1 10px",
           boxShadow: "none",
-          height: "40px",
           backgroundColor: "transparent",
+          zIndex: 1100,
+          backdropFilter: "blur(8px)",
+          WebkitBackdropFilter: "blur(8px)",
         }}
       >
         <Toolbar
           sx={{
             display: "flex",
-            justifyContent: "flex-start",
+            justifyContent: "space-between",
             alignItems: "center",
-            width: "100%",
+            px: 2,
+            py: 1.2,
+            gap: 2,
           }}
         >
           <Image
             src="/adatechlogo.png"
             alt="Ada Tech"
-            width={100}
-            height={100}
+            width={48}
+            height={48}
+            style={{ borderRadius: "10px" }}
           />
           <Typography
             variant="h5"
@@ -72,6 +78,7 @@ export default function Header() {
               cursor: "pointer",
               transition: "color 0.3s",
               "&:hover": { color: "#000" },
+              flexGrow: 1,
             }}
             onClick={() => handleNavClick("Home")}
           >

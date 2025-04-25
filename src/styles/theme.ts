@@ -2,21 +2,21 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    primary: { main: "#008060", contrastText: "#FFFFFF" }, 
-    secondary: { main: "#5E3DB3", contrastText: "#FFFFFF" },
-    success: { main: "#26A69A", contrastText: "#FFFFFF" }, 
-    warning: { main: "#FFC107", contrastText: "#1C1C1E" },
-    error: { main: "#D82C0D", contrastText: "#FFFFFF" }, 
-    info: { main: "#9C27B0", contrastText: "#FFFFFF" }, 
+    primary: { main: "#91F0C2", contrastText: "#1C1C1E" }, 
+    secondary: { main: "#C0B6FF", contrastText: "#1C1C1E" },
+    success: { main: "#99D9EA", contrastText: "#1C1C1E" }, 
+    warning: { main: "#FFD580", contrastText: "#1C1C1E" },
+    error: { main: "#F28B82", contrastText: "#1C1C1E" }, 
+    info: { main: "#B2EBF2", contrastText: "#1C1C1E" }, 
 
     background: {
-      default: "#F3F4F6",
-      paper: "#F3F4F6", 
+      default: "#F4F1FA",
+      paper: "#FFFFFF", 
     },
 
     text: {
       primary: "#1C1C1E",
-      secondary: "#63666A", 
+      secondary: "#4B4B4B", 
     },
 
     divider: "#E1E3E6", 
@@ -56,11 +56,20 @@ const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundColor: "#F3F4F6",
-          color: "#1C1C1E",
-          borderRadius: "12px",
-          padding: "20px",
-    
+          background: "linear-gradient(145deg, #ECE9F7, #FFFFFF)",
+          borderRadius: "20px",
+          border: "1px solid #E1E3E6",
+          boxShadow: "6px 6px 12px #dcdcdc, -6px -6px 12px #ffffff",
+          transition: "all 0.3s ease",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          padding: "32px",
+          flex: "1 1 250px",
+          "&:hover": {
+            transform: "translateY(-8px)",
+            boxShadow: "10px 10px 20px #d0d0d0, -10px -10px 20px #ffffff",
+          },
         },
       },
     },
