@@ -6,13 +6,13 @@ export default function FullStackDeveloperPage() {
   return (
     <Box
       sx={{
-        backgroundColor: "#f9fafb",
+        background: "linear-gradient(145deg, #ECE9F7, #FFFFFF)",
         minHeight: "100vh",
         py: 8,
         px: 2,
         display: "flex",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
       }}
     >
       <Container maxWidth="md">
@@ -59,10 +59,19 @@ export default function FullStackDeveloperPage() {
 
         <Button
           variant="contained"
-          color="primary"
           size="large"
           href="mailto:iman.hedeshy@gmail.com"
-          sx={{ textTransform: "none" }}
+          sx={{
+            textTransform: "none",
+            fontWeight: "bold",
+            py: 1.5,
+            borderRadius: 2,
+            backgroundColor: "#91F0C2",
+            color: "#1C1C1E",
+            "&:hover": {
+              backgroundColor: "#6ad8ae",
+            },
+          }}
         >
           Apply Now
         </Button>

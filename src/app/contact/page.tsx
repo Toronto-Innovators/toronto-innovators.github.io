@@ -34,7 +34,7 @@ export default function Contact() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-       mt: "140px"
+       mt:"30px",
       }}
     >
       <Container maxWidth="md">
@@ -42,11 +42,13 @@ export default function Contact() {
           elevation={0}
           sx={{
             px: { xs: 3, sm: 8 },
-            borderRadius: 3,
-            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.05)",
+            borderRadius: "20px",
+            background: "linear-gradient(145deg, #ECE9F7, #FFFFFF)",
+            boxShadow: "6px 6px 12px #dcdcdc, -6px -6px 12px #ffffff",
             display: "flex",
             flexDirection: "row",
-            gap:10
+            gap: 10,
+            py: 6,
           }}
         >
           <Box component="form" noValidate autoComplete="off">
@@ -85,9 +87,10 @@ export default function Contact() {
                 fontWeight: "bold",
                 py: 1.5,
                 borderRadius: 2,
-                backgroundColor: "#4F46E5",
+                backgroundColor: "#91F0C2",
+                color: "#1C1C1E",
                 "&:hover": {
-                  backgroundColor: "#3730A3",
+                  backgroundColor: "#6ad8ae",
                 },
               }}
             >
@@ -100,7 +103,11 @@ export default function Contact() {
               variant="h3"
               fontWeight="bold"
               textAlign="center"
-              sx={{ mb: 2 }}
+              sx={{
+                mb: 2,
+                color: "#1C1C1E",
+                letterSpacing: "1px",
+              }}
             >
               Contact Us
             </Typography>

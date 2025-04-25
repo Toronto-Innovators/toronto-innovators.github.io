@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import SurveyButton from "./SurveyButton";
+// import SurveyButton from "./SurveyButton";
 
 export default function Footer() {
   return (
@@ -10,10 +10,12 @@ export default function Footer() {
       component="footer"
       sx={{
         mt: 8,
-        py: 3,
-        px: 2,
-        backgroundColor: "#f9fafb",
-        color: "#1e1e1e",
+        py: 4,
+        px: 3,
+        background: "linear-gradient(145deg, #ECE9F7, #FFFFFF)",
+        borderTop: "1px solid #E1E3E6",
+        boxShadow: "inset 0 6px 10px rgba(0,0,0,0.04)",
+        color: "#1C1C1E",
       }}
     >
       <Typography variant="body2" sx={{ mb: 2, textAlign: "left" }}>
@@ -23,7 +25,13 @@ export default function Footer() {
         Looking to join our team? Check out our{" "}
         <a
           href="/careers"
-          style={{ color: "#1e1e1e", textDecoration: "underline", fontWeight: 500 }}
+          style={{
+            color: "#1C1C1E",
+            textDecoration: "underline",
+            fontWeight: 500,
+            transition: "color 0.3s",
+            cursor: "pointer",
+          }}
         >
           career opportunities
         </a>
@@ -43,18 +51,30 @@ export default function Footer() {
             href="https://www.linkedin.com/company/adatech-solutions/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#1e1e1e", textDecoration: "none", fontWeight: 500 }}
+            style={{
+              color: "#1C1C1E",
+              textDecoration: "none",
+              fontWeight: 500,
+              transition: "color 0.3s",
+              cursor: "pointer",
+            }}
           >
             LinkedIn
           </a>
           <a
             href="mailto:info@adatech.ca"
-            style={{ color: "#1e1e1e", textDecoration: "none", fontWeight: 500 }}
+            style={{
+              color: "#1C1C1E",
+              textDecoration: "none",
+              fontWeight: 500,
+              transition: "color 0.3s",
+              cursor: "pointer",
+            }}
           >
             Contact
           </a>
         </Box>
-        <SurveyButton />
+        {/* <SurveyButton /> */}
       </Box>
     </Box>
   );

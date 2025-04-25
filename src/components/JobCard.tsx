@@ -25,13 +25,14 @@ export default function JobCard() {
           elevation={3}
           sx={{
             p: 2.5,
-            borderRadius: 2,
-            background: index % 2 === 0 ? "#f9fafb" : "#f1f5f9",
-            borderLeft: "4px solid #4F46E5",
-            transition: "transform 0.3s ease",
+            borderRadius: "20px",
+            background: "linear-gradient(145deg, #ECE9F7, #FFFFFF)",
+            borderLeft: "4px solid #91F0C2",
+            boxShadow: "6px 6px 12px #dcdcdc, -6px -6px 12px #ffffff",
+            transition: "transform 0.3s ease, box-shadow 0.3s ease",
             "&:hover": {
               transform: "translateY(-4px)",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
+              boxShadow: "10px 10px 20px #d0d0d0, -10px -10px 20px #ffffff",
             },
           }}
         >
@@ -49,10 +50,11 @@ export default function JobCard() {
               sx={{
                 fontWeight: "bold",
                 borderRadius: 2,
-                backgroundColor: "#4F46E5",
+                backgroundColor: "#91F0C2",
+                color: "#1C1C1E",
                 mt: 2,
                 "&:hover": {
-                  backgroundColor: "#3730A3",
+                  backgroundColor: "#6ad8ae",
                 },
               }}
             >

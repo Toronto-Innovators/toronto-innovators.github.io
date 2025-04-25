@@ -26,7 +26,7 @@ export default function Careers() {
         justifyContent: "center",
         px: 3,
         py: 10,
-        paddingTop: "140px",
+        paddingTop: "30px",
         textAlign: "center",
         color: "#111",
         scrollSnapAlign: "start"

@@ -70,16 +70,17 @@ export default function SmallBusinessTips() {
           }
         }
       `}</style>
-      <Container maxWidth="md" sx={{ py: 8, backgroundColor: "#f9fafb" }}>
+      <Container maxWidth="md" sx={{ py: 8, backgroundColor: "#F4F1FA" }}>
         <Box
           sx={{
             height: "100%",
-            background: "#ffffff",
-            flex: 1,
+            background: "linear-gradient(145deg, #ECE9F7, #FFFFFF)",
+            borderRadius: 3,
             px: { xs: 2, md: 4 },
             display: "flex",
             flexDirection: "column",
             gap: 4,
+            boxShadow: "6px 6px 12px #dcdcdc, -6px -6px 12px #ffffff",
           }}
         >
           <Box sx={{ textAlign: "center", my: 4 }}>
@@ -117,15 +118,15 @@ export default function SmallBusinessTips() {
               <Box
                 sx={{
                   background: "#ffffff",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: 2,
+                  border: "1px solid #E1E3E6",
+                  borderRadius: "20px",
                   p: 3,
                   mb: 2,
-                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                  boxShadow: "6px 6px 12px #dcdcdc, -6px -6px 12px #ffffff",
                   transition: "all 0.3s ease",
                   "&:hover": {
-                    transform: "translateY(-3px)",
-                    boxShadow: "0 8px 16px rgba(0,0,0,0.08)",
+                    transform: "translateY(-4px)",
+                    boxShadow: "10px 10px 20px #d0d0d0, -10px -10px 20px #ffffff",
                   },
                 }}
                 onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}

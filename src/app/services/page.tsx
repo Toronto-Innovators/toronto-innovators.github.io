@@ -42,7 +42,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <Box sx={{ mt: "100px", px: 3, minHeight: "100vh" }}>
+    <Box sx={{ mt: "30px", px: 3, minHeight: "100vh" }}>
       <Typography
         variant="h3"
         fontWeight="bold"
@@ -53,7 +53,7 @@ export default function ServicesPage() {
           mb: 4,
         }}
       >
-        Our Services
+       Services
       </Typography>
 
       <Box
