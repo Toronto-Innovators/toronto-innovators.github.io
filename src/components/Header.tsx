@@ -17,7 +17,7 @@ import {
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const navItems = ["Home", "Services", "Contact", "Careers"];
+const navItems = ["Home", "Services", "Contact", "Careers", "Team"];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);

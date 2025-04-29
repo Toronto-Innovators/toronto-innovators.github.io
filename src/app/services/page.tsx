@@ -106,18 +106,6 @@ export default function ServicesPage() {
 
       {showCustom && (
         <Box>
-          <Typography
-            variant="h3"
-            fontWeight="bold"
-            textAlign="center"
-            gutterBottom
-            sx={{
-              letterSpacing: 1.5,
-
-            }}
-          >
-            Services
-          </Typography>
 
           <Box
             sx={{
@@ -160,7 +148,7 @@ export default function ServicesPage() {
                 <Typography
                   variant="subtitle2"
                   fontWeight="bold"
-                  sx={{ color: "success.main", mt: 1 }}
+                  sx={{ color: "text.main", mt: 1 }}
                 >
                   {service.price}
                 </Typography>
@@ -232,7 +220,7 @@ export default function ServicesPage() {
                 <Typography
                   variant="body1"
                   fontWeight="bold"
-                  sx={{ color: "success.main", mt: 1 }}
+                  sx={{ color: "text.main", mt: 1 }}
                 >
                   {item.cost}
                 </Typography>
